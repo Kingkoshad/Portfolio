@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - Respawn Gaming</title>
+  <link rel="stylesheet" href="Respawn.css">
+</head>
+<body>
+  <header>
+    <a href="respawn.html">
+      <img src="logo.png" alt="Respawn Logo" class="logo">
+    </a>
+    <nav>
+      <a href="respawn.html" class="nav-link">HOME</a>
+      <a href="book.html" class="nav-link">BOOK</a>
+      <a href="about.html" class="nav-link is-active">ABOUT</a>
+      <a href="prices.html" class="nav-link">PRICES</a>
+    </nav>
+  </header>
+
+  <main class="about-main">
+    <h1>About Respawn Gaming Drammen</h1>
+    <div class="about-text">
+      <p>
+        Respawn Gaming Drammen is a local gaming lounge offering high-end PCs, VR setups, and a fun environment for players of all levels. 
+        We provide a space to relax, compete, and connect with friends.
+      </p>
+    </div>
+
+    <ul class="about-features">
+      <li>Fast internet and modern gaming PCs</li>
+      <li>VR experiences available</li>
+      <li>Comfortable seating and snacks</li>
+      <li>Friendly staff and competitive atmosphere</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2025 Respawn Gaming Drammen</p>
+  </footer>
+
+  <script>
+  function fadeIn() {
+    document.body.classList.remove("fade-out");
+    document.body.classList.add("ready");
+  }
+
+  window.addEventListener("DOMContentLoaded", fadeIn);
+  window.addEventListener("pageshow", fadeIn);
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.remove("ready");
+      document.body.classList.add("fade-out");
+      setTimeout(() => window.location.href = href, 350);
+    });
+  });
+</script>
+
+</body>
+</html>

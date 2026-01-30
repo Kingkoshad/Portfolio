@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things Fan Page</title>
+    <link rel="stylesheet" href="StrangerThings.css">
+</head>
+<a href="../index.html" class="return-btn">← Back to Portfolio</a>
+<body>
+    <header class="header" id="home">
+        <img src="image.png" alt="Stranger Things Logo" class="logo">
+    </header>
+
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#characters">Characters</a>
+        <a href="#episodes">Episodes</a>
+    </nav>
+
+    <main>
+        <section id="home-section" class="home-section">
+            <h2>Welcome to the Stranger Things Fan Page!</h2>
+            <p>Discover your favorite characters and episodes from the show.</p>
+        </section>
+        
+        <section class="intro-text">
+            <div class="intro-content">
+                <h2>Enter the Upside Down</h2>
+                <p>A dark dimension filled with mystery, danger, and secrets waiting to be uncovered.</p>
+            </div>
+        </section>
+
+        <section id="characters" class="content">
+            <section class="character">
+                <img src="eleven.jpg" alt="Eleven">
+                <h3>Eleven</h3>
+                <p>The girl with telekinetic powers.</p>
+            </section>
+            <section class="character">
+                <img src="papa.jpg" alt="Papa">
+                <h3>Dr. Martin</h3>
+                <p>The brave protector of Hawkins.</p>
+            </section>
+            <section class="character">
+                <img src="vecna.jpg" alt="Vecna">
+                <h3>Vecna</h3>
+                <p>The mysterious villain of the Upside Down.</p>
+            </section>
+        </section>
+        <section id="episodes" class="episodes">
+            <h2>Episodes (Seasons 1 - 5)</h2>
+            <div class="episode-list">
+                <div class="episode-card">
+                    <h3>Season 1</h3>
+                    <p>The disappearance of Will Byers sets the story in motion.</p>
+                </div>
+                <div class="episode-card">
+                    <h3>Season 2</h3>
+                    <p>The Mind Flayer terrorizes Hawkins and Eleven returns.</p>
+                </div>
+                <div class="episode-card">
+                    <h3>Season 3</h3>
+                    <p>The battle at Starcourt Mall changes everything.</p>
+                </div>
+                <div class="episode-card">
+                    <h3>Season 4</h3>
+                    <p>Vecna hunts Hawkins teenagers in terrifying ways.</p>
+                </div>
+                <div class="episode-card">
+                    <h3>Season 5</h3>
+                    <p>The final war against the Upside Down begins (NEW).</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    <footer class="footer">
+        <p>&copy; 2025 Stranger Things Fan Page</p>
+    </footer>
+
+    <script>
+  function fadeIn() {
+    document.body.classList.remove("fade-out");
+    document.body.classList.add("ready");
+  }
+
+  window.addEventListener("DOMContentLoaded", fadeIn);
+  window.addEventListener("pageshow", fadeIn);
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.remove("ready");
+      document.body.classList.add("fade-out");
+      setTimeout(() => window.location.href = href, 350);
+    });
+  });
+</script>
+
+
+</body>
+</html>
+
+
+

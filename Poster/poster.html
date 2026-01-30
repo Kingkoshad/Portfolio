@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Poster | Koshad Portfolio</title>
+  <link rel="stylesheet" href="styles-poster.css" />
+</head>
+<body>
+
+  <a href="../index.html" class="return-btn">← Back to Portfolio</a>
+
+  <main class="poster-page">
+    <h1 class="poster-title">Movie Poster Showcase</h1>
+    <p class="poster-desc">
+      A creative media project focusing on layout, typography, and visual hierarchy.
+    </p>
+
+    <div class="poster-wrap">
+      <img src="poster.png" alt="Movie poster design" class="poster-img" />
+    </div>
+  </main>
+
+<script>
+  function fadeIn() {
+    document.body.classList.remove("fade-out");
+    document.body.classList.add("ready");
+  }
+
+  window.addEventListener("DOMContentLoaded", fadeIn);
+  window.addEventListener("pageshow", fadeIn);
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.remove("ready");
+      document.body.classList.add("fade-out");
+      setTimeout(() => window.location.href = href, 350);
+    });
+  });
+</script>
+
+
+</body>
+</html>
+
+<footer>
+  <p>© 2026 Koshad</p>
+</footer>

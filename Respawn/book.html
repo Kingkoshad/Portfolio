@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book — RESPAWN DRAMMEN</title>
+  <link rel="stylesheet" href="Respawn.css" />
+  <style>
+    
+    .confirmation-note {
+      margin-top: 16px;
+      font-size: 16px;
+      color: #333;
+      display: none;              
+      opacity: 0;                
+      transition: opacity 0.8s ease-in-out;
+    }
+    .confirmation-note.show {
+      display: block;
+      opacity: 1;                
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="respawn.html">
+      <img src="logo.png" alt="Logo" class="logo" />   
+    </a>
+    <nav>
+      <a href="respawn.html" class="nav-link">HOME</a>
+      <a href="book.html" class="nav-link is-active">BOOK</a>
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="prices.html" class="nav-link">PRICES</a>
+    </nav>
+  </header>
+
+  <section id="booking">
+    <div class="booking-box">
+      <h2 class="booking-title">BOOKING</h2>
+      <form class="booking-form" onsubmit="showConfirmation(event)">
+  <input type="text" placeholder="Name" required />
+  <input type="email" placeholder="Email" required />
+  <input type="tel" placeholder="Phone" required />
+
+  <div class="time-options">
+    <label class="time-box">
+      <input type="radio" name="time" value="14:30" required />
+      <span>14:30</span>
+    </label>
+    <label class="time-box">
+      <input type="radio" name="time" value="15:30" />
+      <span>15:30</span>
+    </label>
+    <label class="time-box">
+      <input type="radio" name="time" value="16:30" />
+      <span>16:30</span>
+    </label>
+    <label class="time-box">
+      <input type="radio" name="time" value="17:30" />
+      <span>17:30</span>
+    </label>
+  </div>
+
+  <button type="submit">BOOK NOW</button>
+</form>
+
+      <p id="confirmation-note" class="confirmation-note">
+        ✅ Email sent! Please check your inbox for confirmation.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    function showConfirmation(event) {
+      event.preventDefault();
+      const note = document.getElementById("confirmation-note");
+      note.classList.add("show"); 
+      note.textContent = "✅ Email sent! Please check your inbox for confirmation.";
+    }
+  </script>
+
+<script>
+  function fadeIn() {
+    document.body.classList.remove("fade-out");
+    document.body.classList.add("ready");
+  }
+
+  window.addEventListener("DOMContentLoaded", fadeIn);
+  window.addEventListener("pageshow", fadeIn);
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.remove("ready");
+      document.body.classList.add("fade-out");
+      setTimeout(() => window.location.href = href, 350);
+    });
+  });
+</script>
+
+</body>
+</html>
+
+<footer>
+  <p>© 2025 Respawn Gaming Drammen</p>
+</footer>

@@ -1,0 +1,379 @@
+@font-face {
+  font-family: 'Gabato';
+  src: url('fonts/Gabato-Regular.woff2') format('woff2'),
+       url('fonts/Gabato-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Gabato', sans-serif;
+  background-color: #652D91;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: relative;
+  z-index: 10;
+  background: transparent;
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-link {
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 22px;
+  text-shadow: -2px 2px 0px #000000;
+  font-family: 'Gabato', sans-serif; 
+  letter-spacing: 1.5px;
+}
+
+.nav-link.is-active {
+  color: #52c2ff;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.hero-image {
+  width: 90%;
+  max-width: 1440px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.book-btn {
+  position: absolute;
+  bottom: 0px; 
+  left: 50%;
+  transform: translate(-50%, 50%); 
+  padding: 24px 60px;
+  font-size: 36px;
+  font-family: 'Gabato', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 12px;
+  background-color: #52c2ff;
+  color: #000000;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px #000000;
+  z-index: 10;
+}
+
+.book-btn:hover {
+  filter: brightness(1.1);
+}
+
+#booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.booking-box {
+  background-color: white;
+  color: black;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.booking-title {
+  font-family: 'Gabato', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking-form input {
+  padding: 14px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+
+.booking-form button {
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #52c2ff;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px #000000;
+}
+
+.booking-form button:hover {
+  filter: brightness(1.1);
+}
+
+.confirmation-note {
+  margin-top: 16px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.time-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;                             
+  justify-items: center;                
+  margin: 20px 0;                       
+}
+
+.time-options {
+  display: flex;
+  justify-content: center;  
+  gap: 15px;                
+  margin: 20px 0;            
+}
+
+.time-box {
+  border-radius: 8px;          
+  background-color: #52c2ff;   
+  color: black;               
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;            
+  font-family: Arial, sans-serif; 
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.time-box:hover {
+  background-color: #52c2ff;   
+  transform: scale(1.05);
+}
+
+.time-box input {
+  display: none;
+}
+
+.time-box input:checked + span {
+  transform: scale(1.08);
+  transition: transform 0.2s ease;
+  border-radius: 8px;
+  padding: 12px 20px;
+  display: inline-block;
+}
+
+body {
+  margin: 0;
+  background-color: #652D91;
+  color: white;
+  font-family: Arial, sans-serif; 
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-link {
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 22px;
+  text-shadow: -2px 2px 0px #000000;
+}
+
+.nav-link.is-active {
+  color: #52c2ff;
+}
+
+.about-main {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-main h1 {
+  font-family: 'Gabato', sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: -2px 2px 0px #000000;
+}
+
+.about-text {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.about-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: left;   
+}
+
+.about-features li {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 10px 0;
+  color: #f0f0f0;
+  background: rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+.prices-main {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.prices-title {
+  font-family: 'Gabato', sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: -2px 2px 0px #000000;
+}
+
+.prices-text {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #f0f0f0;
+}
+
+.prices-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.price-box {
+  background: #52c2ff;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.price-box h2 {
+  font-family: 'Gabato', sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.price-box p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;   
+}
+
+footer {
+  background-color: #5c2b81;         
+  text-align: center;
+  padding: 10px 0 0 0;                
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #ffffff;                    
+  line-height: 1;
+
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+.return-btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #8a1ddd;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 20px;
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.return-btn:hover {
+  background: #9000ff;
+  transform: translateY(-2px) scale(1.02);
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+body.ready {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+

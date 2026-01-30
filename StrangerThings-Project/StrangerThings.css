@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('red.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.header {
+    background-color: #b30000;
+    text-align: center;
+}
+
+.header .logo {
+    width: 300px; 
+    height: auto;  
+}
+
+.nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px;
+    position: sticky;   
+    top: 0;            
+    z-index: 100;       
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.home-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1a1a1a;
+}
+
+.banner-section {
+    margin-top: 40px;
+    width: 100%;
+    height: 350px;
+    background-image: url('red.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 25px 40px;
+    border-radius: 12px;
+}
+
+.banner-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.banner-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: white;
+}
+
+.intro-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 20px; 
+    width: 100%;
+}
+
+.intro-content {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 40px 60px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 800px;
+}
+
+.intro-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    color: white;
+}
+
+#characters {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    padding: 25px;
+}
+
+.character {
+    background-color: #222;
+    padding: 30px;
+    flex: 1 1 260px;
+    max-width: 450px;
+    text-align: center;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.character img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.character:hover {
+    transform: scale(1.05);
+}
+
+#episodes {
+    scroll-margin-top: 80px;
+    margin: 100px auto 0 auto;     
+    padding: 50px 20px;
+    background-color: rgba(34, 34, 34, 0.85);
+    border-radius: 12px;
+    max-width: 1000px;             
+    width: 90%;                     
+    color: white;
+    text-align: center;          
+}
+
+.episodes h2 {
+    margin-bottom: 30px;
+}
+
+.episode-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;       
+    gap: 25px;
+}
+
+.episode-card {
+    background-color: #222;
+    padding: 20px;
+    flex: 1 1 220px;
+    max-width: 280px;
+    text-align: center;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.episode-card:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: #b30000;
+    text-align: center;
+    padding: 18px;
+    margin-top: 300px;
+    font-size: 1rem;
+}
+
+.return-btn{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+
+  display: inline-block;
+  width: fit-content;
+  padding: 12px 24px;
+  border-radius: 8px;
+
+  background: #c51000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.return-btn:hover{
+  background: #e71300;
+  transform: translateY(-2px) scale(1.02);
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+body.ready {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}

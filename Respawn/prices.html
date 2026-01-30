@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prices — RESPAWN DRAMMEN</title>
+  <link rel="stylesheet" href="Respawn.css" />
+</head>
+
+<body>
+
+  <header>
+    <a href="respawn.html">
+      <img src="logo.png" alt="Logo" class="logo" />
+    </a>
+    <nav>
+      <a href="respawn.html" class="nav-link">HOME</a>
+      <a href="book.html" class="nav-link">BOOK</a>
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="prices.html" class="nav-link is-active">PRICES</a>
+    </nav>
+  </header>
+
+  <main class="prices-main">
+    <h1 class="prices-title">PRICES</h1>
+    <p class="prices-text">Choose your gaming experience:</p>
+
+    <div class="prices-list">
+      <div class="price-box">
+        <h2>Single Session</h2>
+        <p>NOK 150</p>
+      </div>
+      <div class="price-box">
+        <h2>Group Session (up to 4)</h2>
+        <p>NOK 500</p>
+      </div>
+      <div class="price-box">
+        <h2>Monthly Membership</h2>
+        <p>NOK 1200</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Respawn Gaming Drammen</p>
+  </footer>
+  
+  <script>
+  function fadeIn() {
+    document.body.classList.remove("fade-out");
+    document.body.classList.add("ready");
+  }
+
+  window.addEventListener("DOMContentLoaded", fadeIn);
+  window.addEventListener("pageshow", fadeIn);
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.remove("ready");
+      document.body.classList.add("fade-out");
+      setTimeout(() => window.location.href = href, 350);
+    });
+  });
+</script>
+
+</body>
+</html>

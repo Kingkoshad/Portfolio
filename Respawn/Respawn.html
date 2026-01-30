@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RESPAWN DRAMMEN — Game Night</title>
+  <link rel="stylesheet" href="Respawn.css" />
+</head>
+<a href="../index.html" class="return-btn">← Back to Portfolio</a>
+<body>
+  <header>
+  <a href="respawn.html">
+    <img src="logo.png" alt="Logo" class="logo" />
+  </a>
+  <nav>
+    <a href="#home" class="nav-link is-active">HOME</a>
+    <a href="book.html" class="nav-link">BOOK</a>
+    <a href="about.html" class="nav-link">ABOUT</a>
+    <a href="prices.html" class="nav-link">PRICES</a>
+  </nav>
+</header>
+
+  <section class="hero" id="home">
+    <img src="vr.png" alt="VR Girl Banner" class="hero-image" />
+    <button class="book-btn" onclick="location.href='book.html'">BOOK</button>
+  </section>
+
+  <section id="booking">
+  </section>
+
+  <script>
+  function fadeIn() {
+    document.body.classList.remove("fade-out");
+    document.body.classList.add("ready");
+  }
+
+  window.addEventListener("DOMContentLoaded", fadeIn);
+  window.addEventListener("pageshow", fadeIn);
+
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.remove("ready");
+      document.body.classList.add("fade-out");
+      setTimeout(() => window.location.href = href, 350);
+    });
+  });
+</script>
+
+</body>
+</html>
+
+<footer>
+  <p>© 2025 Respawn Gaming Drammen</p>
+</footer>
